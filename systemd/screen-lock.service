@@ -1,0 +1,13 @@
+[Unit]
+Description=Lock the screen automatically after a timeout
+Wants=lightdm.service
+After=lightdm.service
+
+[Service]
+Type=simple
+User=matt
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/xautolock -time 5 -locker /usr/bin/i3lock-wrapper -detectsleep
+
+[Install]
+WantedBy=graphical.target

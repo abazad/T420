@@ -1,0 +1,11 @@
+[Unit]
+Description=Set Wake-on-LAN Off
+Wants=NetworkManager.service
+After=NetworkManager.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/ethtool -s enp0s25 wol d
+
+[Install]
+WantedBy=multi-user.target

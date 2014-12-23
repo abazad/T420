@@ -1,0 +1,21 @@
+# 
+# /etc/fstab: static file system information
+#
+# <file system>	<dir>	<type>	<options>	<dump>	<pass>
+# /dev/sda3 LABEL=root
+UUID=1eadb57e-0f42-4b6f-824d-7424270c3485	/         	btrfs     	rw,noatime,compress=lzo,ssd,discard,autodefrag	0 0
+
+# /dev/sda1
+UUID=44a2e071-36dc-48f2-9780-f6157b423ecc	/boot     	ext4      	rw,noatime,discard	0 2
+
+# /dev/sda5
+UUID=6b9bf8f8-34ed-4aa3-bb9c-309675919e92	/var      	ext4      	rw,noatime,discard	0 2
+
+# /dev/sda6 LABEL=home
+UUID=5647e6ec-d0b6-4d38-a014-9b7de3a3a259	/home     	btrfs     	rw,noatime,compress=lzo,ssd,discard,autodefrag	0 0
+
+# /dev/sda2
+UUID=5f39f47b-f827-411f-a465-4fdd69a2f4f3	none      	swap      	defaults  	0 0
+
+UUID=46F012F6F012EC45	/mnt/win_sys	ntfs	defaults	0 0
+UUID=8EB6140DB613F485	/mnt/win_c	ntfs	defaults	0 0

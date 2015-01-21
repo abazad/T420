@@ -1,8 +1,0 @@
-default
-fstab
-modprobe.d
-README.md
-sysctl.d
-systemd
-testfile.txt
-thinkfan.conf
